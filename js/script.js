@@ -114,3 +114,151 @@ arrowLeft.addEventListener('click', ()=>{
     activePortfolio();
     
 }) 
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+gsap.utils.toArray(".services-box").forEach((box, i) => {
+  gsap.from(box, {
+    scrollTrigger: {
+      trigger: box,
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 50,
+    duration: 0.6,
+    delay: i * 0.15,
+    ease: "power2.out"
+  });
+});
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Home Detail (fade from left)
+gsap.from(".home-detail", {
+  scrollTrigger: {
+    trigger: ".home",
+    start: "top 80%",
+  },
+  opacity: 0,
+  x: -100,
+  duration: 1,
+  ease: "power2.out"
+});
+
+// Home Image (fade from right)
+gsap.from(".home-img .img-box", {
+  scrollTrigger: {
+    trigger: ".home",
+    start: "top 80%",
+  },
+  opacity: 0,
+  x: 100,
+  duration: 1,
+  delay: 0.3,
+  ease: "power2.out"
+});
+
+
+
+
+gsap.registerPlugin(ScrollTrigger);
+
+// Resume Box Animation (fade-in effect)
+gsap.from(".resume-item", {
+  scrollTrigger: {
+    trigger: ".resume-item",
+    start: "top 80%",
+  },
+  opacity: 0,
+  y: 50,
+  duration: 1,
+  stagger: 0.2,
+  ease: "power2.out",
+  delay: 0.3,
+});
+
+// Resume Buttons (fade-in from bottom)
+gsap.from(".resume-btn", {
+  scrollTrigger: {
+    trigger: ".resume-btn",
+    start: "top 80%",
+  },
+  opacity: 0,
+  y: 30,
+  duration: 0.8,
+  stagger: 0.2,
+  ease: "power2.out",
+  delay: 0.3,
+});
+
+// Resume Details (fade-in from left/right based on section)
+gsap.from(".resume-detail", {
+  scrollTrigger: {
+    trigger: ".resume-detail",
+    start: "top 80%",
+  },
+  opacity: 0,
+  x: 100,  // Left to right for most sections
+  duration: 1,
+  stagger: 0.3,
+  ease: "power2.out",
+});
+
+
+gsap.from(".resume-box", {
+  scrollTrigger: {
+    trigger: ".resume-box",
+    start: "top 80%",
+  },
+  opacity: 0,
+  x: -100,  // Left to right for most sections
+  duration: 1,
+  stagger: 0.3,
+  ease: "power2.out",
+});
+
+// Adjust for different sections like Education, Skills, About Me
+gsap.from(".resume-detail.Education", {
+  scrollTrigger: {
+    trigger: ".resume-detail.Education",
+    start: "top 80%",
+  },
+  
+  x: 100,  // Right to left for Education
+  duration: 1,
+  delay: 0.5,
+  stagger: 0.3,
+  ease: "power2.out",
+});
+
+gsap.from(".resume-detail.Skills", {
+  scrollTrigger: {
+    trigger: ".resume-detail.Skills",
+    start: "top 80%",
+  },
+  opacity: 0,
+  y: 50,  // From bottom for Skills section
+  duration: 1,
+  stagger: 0.3,
+  ease: "power2.out",
+  delay: 0.7,
+});
+
+gsap.from(".resume-detail.about", {
+  scrollTrigger: {
+    trigger: ".resume-detail.about",
+    start: "top 80%",
+  },
+  opacity: 0,
+  x: -100, // Left to right for About Me
+  duration: 1,
+  stagger: 0.3,
+  ease: "power2.out",
+  delay: 1,
+});
+
+
+
