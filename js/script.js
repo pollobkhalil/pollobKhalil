@@ -260,5 +260,120 @@ gsap.from(".resume-detail.about", {
   delay: 1,
 });
 
+  // Portfolio Section Animations
+  gsap.from("#porfolio-sec .heading", {
+    scrollTrigger: {
+      trigger: "#porfolio-sec .heading",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+    ease: "power2.out"
+  });
 
+  gsap.utils.toArray(".portfolio-detail").forEach((detail, i) => {
+    gsap.from(detail, {
+      scrollTrigger: {
+        trigger: detail,
+        start: "top 85%",
+        toggleActions: "play none none none"
+      },
+      opacity: 0,
+      x: -50,
+      duration: 0.8,
+      delay: i * 0.15,
+      ease: "power2.out"
+    });
+  });
 
+  gsap.from(".portfolio-carousel", {
+    scrollTrigger: {
+      trigger: ".portfolio-carousel",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    x: 100,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  gsap.from(".navigation button", {
+    scrollTrigger: {
+      trigger: ".portfolio-carousel",
+      start: "top 90%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 30,
+    duration: 0.5,
+    stagger: 0.2,
+    ease: "power2.out"
+  });
+
+  // Contact Section Animations
+  gsap.from("#contact-sec h2", {
+    scrollTrigger: {
+      trigger: "#contact-sec h2",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 50,
+    duration: 0.8,
+    ease: "power2.out"
+  });
+
+  gsap.from("#contact-sec .desc", {
+    scrollTrigger: {
+      trigger: "#contact-sec .desc",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 30,
+    duration: 0.6,
+    ease: "power2.out"
+  });
+
+  gsap.utils.toArray(".contact-detail").forEach((item, i) => {
+    gsap.from(item, {
+      scrollTrigger: {
+        trigger: item,
+        start: "top 90%",
+        toggleActions: "play none none none"
+      },
+      opacity: 0,
+      x: -50,
+      duration: 0.6,
+      delay: i * 0.1,
+      ease: "power2.out"
+    });
+  });
+
+  gsap.from("#contact-sec form", {
+    scrollTrigger: {
+      trigger: "#contact-sec form",
+      start: "top 85%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    y: 50,
+    duration: 1,
+    ease: "power2.out"
+  });
+
+  gsap.from("#contact-sec form .btn", {
+    scrollTrigger: {
+      trigger: "#contact-sec form",
+      start: "top 80%",
+      toggleActions: "play none none none"
+    },
+    opacity: 0,
+    scale: 0.9,
+    duration: 0.5,
+    delay: 0.4,
+    ease: "back.out(1.7)"
+  });
