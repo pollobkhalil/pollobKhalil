@@ -1,33 +1,44 @@
 
 const navLinks = document.querySelectorAll('header nav a');
 const menuIcon = document.querySelector('#menu-icon');
-const navbar = document.querySelector('header nav');
+const navbar = document.querySelector('header nav'); // ✅ ঠিক করা হয়েছে
 
-
+// Toggle icon click করলে মেনু show/hide হবে
 menuIcon.addEventListener('click', () => {
-    menuIcon.classList.toggle('bx-x');
-    navbar.classList.toggle('active');
+  menuIcon.classList.toggle('bx-x');
+  navbar.classList.toggle('active');
+});
 
-} );
+// মেনুতে ক্লিক করলে active হবে, আর মেনু বন্ধ হবে
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    navLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
 
-const activePage = () =>{
-    navLinks.forEach(link => {
+    menuIcon.classList.remove('bx-x');
+    navbar.classList.remove('active');
+  });
+});
 
-        link.classList.remove('active');
-    });
+// স্ক্রোল করলে active মেনু পরিবর্তন হবে
+window.addEventListener('scroll', () => {
+  let currentSection = '';
 
-     menuIcon.classList.toggle.remove('bx-x');
-    navbar.classList.toggle.remove('active');
-}
+  document.querySelectorAll('section').forEach(section => {
+    const sectionTop = section.offsetTop - 150;
+    const sectionHeight = section.offsetHeight;
 
-navLinks.forEach((link, idx) => {
-    link.addEventListener('click', ()=>{
-        if(!link.classList.contains('acitve')){
-            activePage();
+    if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+      currentSection = section.getAttribute('id');
+    }
+  });
 
-            link.classList.add('active');
-        }
-    });
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href').includes(currentSection)) {
+      link.classList.add('active');
+    }
+  });
 });
 
 
