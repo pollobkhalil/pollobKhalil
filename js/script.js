@@ -1,15 +1,15 @@
 
 const navLinks = document.querySelectorAll('header nav a');
 const menuIcon = document.querySelector('#menu-icon');
-const navbar = document.querySelector('header nav'); // ✅ ঠিক করা হয়েছে
+const navbar = document.querySelector('header nav'); 
 
-// Toggle icon click করলে মেনু show/hide হবে
+// responsive menu  
 menuIcon.addEventListener('click', () => {
   menuIcon.classList.toggle('bx-x');
   navbar.classList.toggle('active');
 });
 
-// মেনুতে ক্লিক করলে active হবে, আর মেনু বন্ধ হবে
+
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
     navLinks.forEach(l => l.classList.remove('active'));
@@ -20,7 +20,7 @@ navLinks.forEach(link => {
   });
 });
 
-// স্ক্রোল করলে active মেনু পরিবর্তন হবে
+// Scroll section active link
 window.addEventListener('scroll', () => {
   let currentSection = '';
 
