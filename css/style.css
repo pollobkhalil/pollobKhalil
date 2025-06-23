@@ -103,7 +103,7 @@ section{
     color: transparent;
     -webkit-text-stroke: .07rem var(--main-color);
     animation: display-text 16s linear infinite;
-    animation-delay: calc(-4s * var(--i));
+    animation-delay:  calc(-4s * var(--i));
 }
 
 
