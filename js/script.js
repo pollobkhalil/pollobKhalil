@@ -200,7 +200,7 @@ gsap.from(".resume-detail", {
     trigger: ".resume-detail",
     start: "top 80%",
   },
-  opacity: 0,
+  opacity: 1,
   x: 100,  // Left to right for most sections
   duration: 1,
   stagger: 0.3,
@@ -227,7 +227,7 @@ gsap.from(".resume-detail.Education", {
     start: "top 80%",
   },
   
-  x: 100,  // Right to left for Education
+  // x: 100,  // Right to left for Education
   duration: 1,
   delay: 0.5,
   stagger: 0.3,
@@ -239,7 +239,7 @@ gsap.from(".resume-detail.Skills", {
     trigger: ".resume-detail.Skills",
     start: "top 80%",
   },
-  opacity: 0,
+  opacity: 1,
   y: 50,  // From bottom for Skills section
   duration: 1,
   stagger: 0.3,
@@ -252,8 +252,8 @@ gsap.from(".resume-detail.about", {
     trigger: ".resume-detail.about",
     start: "top 80%",
   },
-  opacity: 0,
-  x: -100, // Left to right for About Me
+  opacity: 1,
+  // x: -100, // Left to right for About Me
   duration: 1,
   stagger: 0.3,
   ease: "power2.out",
