@@ -295,7 +295,7 @@ gsap.from(".resume-detail.about", {
       toggleActions: "play none none none"
     },
     opacity: 0,
-    x: 100,
+    // x: 100,
     duration: 1,
     ease: "power2.out"
   });
