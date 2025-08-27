@@ -13,6 +13,7 @@
 :root{
     --bg-color: #1f242d;
     --second-bg-color: #323946;
+    --main-gradient:linear-gradient(90deg,rgba(0, 194, 100, 1) 0%, rgba(87, 199, 133, 1) 50%, rgba(189, 184, 42, 1) 100%);
     --main-color: #00c264;
     --white-color: #fff;
     --disbled-color: #fff3;
@@ -101,7 +102,7 @@ section{
     position: relative;
     display: inline-block;
     color: transparent;
-    -webkit-text-stroke: .07rem var(--main-color);
+    /* -webkit-text-stroke: .07rem var(--main-color); */
     animation: display-text 16s linear infinite;
     animation-delay:  calc(-4s * var(--i)); 
 }
@@ -121,6 +122,9 @@ section{
     width: 0;
     border-right: .2rem solid var(--main-color);
     color: var(--main-color);
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     white-space: nowrap;
     overflow: hidden;
     animation: fill-text 4s linear infinite;
@@ -155,7 +159,7 @@ section{
 .btn{
     display: inline-block;
     padding: 1rem 2rem;
-    background: var(--main-color);
+    background: var(--main-gradient);
     border: .2rem solid var(--main-color);
     border-radius: 4rem;
     box-shadow: 0 0 .5rem var(--main-color);
@@ -166,6 +170,9 @@ section{
 }
 .btn:hover{
     background: transparent;
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: var(--main-color);
     box-shadow: none;
 }
@@ -186,9 +193,9 @@ section{
 }
 
 .home-detail .btn-sci .sci a:hover{
-    background: var(--main-color);
+    background: var(--main-gradient);
     color: var(--bg-color);
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: 0 0 1rem var(--main-gradient);
 }
 
 
@@ -216,6 +223,9 @@ section{
     width: 50rem;
     height: 50rem;
     background: conic-gradient(transparent, transparent, transparent, var(--main-color));
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     transform: rotate(0deg);
     animation: rotate-border 10s linear infinite;
 }
@@ -261,7 +271,10 @@ section{
     margin-bottom: 2rem;
 }
 .heading span{
-    color: var(--main-color);
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    /* color: var(--main-color); */
 }
 
 .services-container{
@@ -280,6 +293,7 @@ section{
 
 .services-container .services-box:hover{
     border-color: var(--main-color);
+    
     transform: scale(1.02);
     
 }
@@ -295,6 +309,7 @@ section{
 }
 
 .services-box:hover .icon :not(a i){
+    
     color: var(--main-color);
 }
 
@@ -310,12 +325,14 @@ section{
 
 
 .services-box:hover .icon a{
-   background: var(--main-color);
+   background: var(--main-gradient);
 }
 
 .services-box .icon a i{
     font-size: 3rem;
     color: var(--bg-color);
+  
+    
     transform: rotate(225deg);
     transition: .5s;
 }
@@ -332,6 +349,9 @@ section{
 }
 
 .services-box:hover h3{
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     color: var(--main-color);
 }
 
@@ -380,6 +400,9 @@ section{
 .resume-box .resume-btn.active{
     border-color: var(--main-color);
     color: var(--main-color);
+    background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 .resume-detail{
@@ -394,6 +417,7 @@ section{
 .resume-box .heading{
     font-size: 3.5rem;
     text-align: left;
+    
 
 }
 
@@ -427,6 +451,7 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
 
 }
 
@@ -436,6 +461,7 @@ section{
 
 .resume-list h3{
     font-size: 2.2rem;
+    
 }
 
 .resume-list .company{
@@ -946,6 +972,9 @@ section{
 .footer-logo h2 {
   font-size: 3rem; /* Large title */
   margin-bottom: 0.6rem;
+  background: var(--main-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   color: var(--main-color);
 }
 
