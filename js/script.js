@@ -240,7 +240,7 @@ gsap.from(".resume-detail.Skills", {
     start: "top 80%",
   },
   opacity: 1,
-  y: 50,  // From bottom for Skills section
+  // y: 50,  // From bottom for Skills section
   duration: 1,
   stagger: 0.3,
   ease: "power2.out",
